@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <style>
         @import url("stylesForGeo.css")
@@ -8,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <button id="up">up</button>
     <button id="left">left</button>
@@ -15,68 +17,110 @@
     <button id="down">down</button>
     <script>
         const http = new XMLHttpRequest()
-        
+
         const url = 'http://localhost:3000' // host url
 
-        up.addEventListener('mouseup', ()=>{
+        up.addEventListener('mouseup', () => {
             console.log('up')
             up.style.color = 'black'
             http.open('POST', url, true)
             http.setRequestHeader('Content-type', 'application/json')
-            http.send( JSON.stringify({left: false, right: false, down: false, up: false }))
+            http.send(JSON.stringify({
+                left: false,
+                right: false,
+                down: false,
+                up: false
+            }))
         })
 
-        up.addEventListener('mousedown', ()=>{
+        up.addEventListener('mousedown', () => {
             console.log('down')
             up.style.color = 'white'
             http.open('POST', url, true)
             http.setRequestHeader('Content-type', 'application/json')
-            http.send( JSON.stringify({left: false, right: false, down: false, up: true }))
+            http.send(JSON.stringify({
+                left: false,
+                right: false,
+                down: false,
+                up: true
+            }))
 
         })
-        down.addEventListener('mouseup', ()=>{
+        down.addEventListener('mouseup', () => {
             console.log('up')
             down.style.color = 'black'
             http.open('POST', url, true)
             http.setRequestHeader('Content-type', 'application/json')
-            http.send( JSON.stringify({left: false, right: false, down: false, up: false }))
+            http.send(JSON.stringify({
+                left: false,
+                right: false,
+                down: false,
+                up: false
+            }))
         })
 
-        down.addEventListener('mousedown', ()=>{
+        down.addEventListener('mousedown', () => {
             console.log('down')
             down.style.color = 'white'
             http.open('POST', url, true)
             http.setRequestHeader('Content-type', 'application/json')
-            http.send( JSON.stringify({left: false, right: false, down: true, up: false }))
+            http.send(JSON.stringify({
+                left: false,
+                right: false,
+                down: true,
+                up: false
+            }))
         })
-        left.addEventListener('mouseup', ()=>{
+        left.addEventListener('mouseup', () => {
             console.log('up')
             left.style.color = 'black'
             http.open('POST', url, true)
             http.setRequestHeader('Content-type', 'application/json')
-            http.send( JSON.stringify({left: false, right: false, down: false, up: false }))
+            http.send(JSON.stringify({
+                left: false,
+                right: false,
+                down: false,
+                up: false
+            }))
         })
-        left.addEventListener('mousedown', ()=>{
+        left.addEventListener('mousedown', () => {
             console.log('down')
             left.style.color = 'white'
             http.open('POST', url, true)
             http.setRequestHeader('Content-type', 'application/json')
-            http.send( JSON.stringify({left: true, right: false, down: false, up: false }))
+            http.send(JSON.stringify({
+                left: true,
+                right: false,
+                down: false,
+                up: false
+            }))
         })
-        right.addEventListener('mouseup', ()=>{
+        right.addEventListener('mouseup', () => {
             console.log('up')
             right.style.color = 'black'
             http.open('POST', url, true)
             http.setRequestHeader('Content-type', 'application/json')
-            http.send( JSON.stringify({left: false, right: false, down: false, up: false }))
+            http.send(JSON.stringify({
+                left: false,
+                right: false,
+                down: false,
+                up: false
+            }))
         })
-        right.addEventListener('mousedown', ()=>{
-            console.log('down')
-            right.style.color = 'white'
-            http.open('POST', url, true)
-            http.setRequestHeader('Content-type', 'application/json')
-            http.send( JSON.stringify({left: false, right: true, down: false, up: false }))
-        })
+        right.addEventListener('mousedown', () => {
+                console.log('down')
+                right.style.color = 'white'
+                http.open('POST', url, true)
+                http.setRequestHeader('Content-type', 'application/json')
+                http.send(JSON.stringify({
+                    left: false,
+                    right: true,
+                    down: false,
+                    up: false
+                }))
+            })
+            //commit
     </script>
 </body>
+
 </html>
