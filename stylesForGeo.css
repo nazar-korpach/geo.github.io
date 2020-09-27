@@ -1,0 +1,33 @@
+button {
+    height: 7%;
+    width: 10%;
+    display: block;
+    position: relative;
+    border-radius: 0.3em;
+    margin: 0 auto;
+    margin-top: 2%;
+    font-size: 2em;
+    background-color: #CD5CDC;
+    color: black;
+}
+
+#up {
+    margin-top: 15%;
+}
+
+#down {
+    margin-top: 7%;
+    margin-bottom: 20%;
+}
+
+#right {
+    position: absolute;
+    margin-left: 60%;
+    margin-right: 40%;
+}
+
+#left {
+    position: absolute;
+    margin-left: 30%;
+    margin-right: 70%;
+}
